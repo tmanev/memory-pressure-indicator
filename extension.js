@@ -11,7 +11,7 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
-const POLL_INTERVAL_MS = 1000; // update interval
+const POLL_INTERVAL_MS = 5000; // update interval
 
 function parsePressure(content) {
     const res = { some: {}, full: {} };
