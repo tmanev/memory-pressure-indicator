@@ -1,0 +1,9 @@
+{
+  "uuid": "memory-pressure-indicator@local",
+  "name": "Memory Pressure Indicator",
+  "description": "Panel indicator that shows Linux memory pressure using /proc/pressure/memory (PSI).",
+  "shell-version": [
+    "46"
+  ],
+  "version": 3
+}
