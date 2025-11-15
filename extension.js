@@ -35,7 +35,16 @@ class MemoryPressureIndicator extends PanelMenu.Button {
         super._init(0.0, 'Memory Pressure Indicator');
 
         // Small colored dot
-        this._dot = new St.BoxLayout({ style_class: 'memory-pressure-dot' });
+        this._dot = new St.Button({
+            style_class: 'memory-pressure-dot',
+            reactive: false,
+            can_focus: false,
+            track_hover: false,
+            x_align: Clutter.ActorAlign.CENTER,
+            y_align: Clutter.ActorAlign.CENTER,
+            x_expand: false,
+            y_expand: false,
+        });
         this.add_child(this._dot);
 
         // Label text
@@ -88,7 +97,7 @@ class MemoryPressureIndicator extends PanelMenu.Button {
         else if (some10 >= 1 || full10 >= 1) color = '#f0ad4e';  // orange
 
         this._dot.set_style(
-            `background-color:${color};width:12px;height:12px;border-radius:8px;margin-right:6px;`
+            `background-color:${color};width:12px;height:12px;border-radius:8px;`
         );
 
         // Popup info
